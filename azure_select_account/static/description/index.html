@@ -1,0 +1,94 @@
+<section class="oe_container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="text-center" style="color:#63e6be; font-weight: bold; font-size: 2.5rem;">Azure SSO: Force Account Selection</h2>
+            <h3 class="text-center" style="color:#4d30c6;">Stop the Auto-Login Loop on Odoo 18+</h3>
+            
+            <div class="alert alert-info" style="display: inline-block; padding: 10px 20px; font-size:16px;">
+                <i class="fa fa-info-circle"></i> <b>Compatibility:</b> Odoo Community & Enterprise (v18.0 / v19.0)
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h3 style="color: #333; border-bottom: 2px solid #875A7B; padding-bottom: 10px;">The Problem</h3>
+                <p class="mt-3 text-justify" style="font-size: 16px; line-height: 1.6;">
+                    By default, Odoo's Azure OAuth implementation remembers the last logged-in Microsoft account. While this is convenient for single users, it creates a <b>frustrating loop</b> for users who manage multiple accounts (e.g., Consultants, Developers, or users with both Personal and Work accounts). 
+                    <br/><br/>
+                    Once logged in, it becomes difficult to switch accounts without clearing browser cookies or opening an Incognito window.
+                </p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h3 style="color: #28a745; border-bottom: 2px solid #28a745; padding-bottom: 10px;">The Solution</h3>
+                <p class="mt-3 text-justify" style="font-size: 16px; line-height: 1.6;">
+                    This module injects the standard OAuth2 parameter <code>prompt='select_account'</code> into the Azure authentication request.
+                    <br/><br/>
+                    <b>Result:</b> Microsoft will <i>always</i> present the account selection screen, giving the user full control over which identity to use for that session.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center mb-5">
+            <h2 style="font-weight: 300;">Key Features</h2>
+        </div>
+        
+        <div class="col-md-4 text-center mb-4">
+            <i class="fa fa-mouse-pointer fa-4x mb-3" style="color: #63e6be;"></i>
+            <h4>Total Control</h4>
+            <p class="text-muted">Never get stuck in the wrong account again. Forces the chooser UI every time.</p>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+            <i class="fa fa-cogs fa-4x mb-3" style="color: #63e6be;"></i>
+            <h4>Zero Configuration</h4>
+            <p class="text-muted">Plug & Play. Install the module, and it works instantly for all Azure OAuth providers.</p>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+            <i class="fa fa-shield fa-4x mb-3" style="color: #63e6be;"></i>
+            <h4>Standard Compliant</h4>
+            <p class="text-muted">Uses official Microsoft Entra ID (Azure AD) URL parameters. Safe and secure.</p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">FAQ</h2>
+            
+            <div class="card mb-3">
+                <div class="card-header"><b>Does this affect Google or other providers?</b></div>
+                <div class="card-body">
+                    <p class="card-text">No. The code specifically checks for <code>login.microsoftonline.com</code> endpoints before applying the parameter.</p>
+                </div>
+            </div>
+            
+            <div class="card mb-3">
+                <div class="card-header"><b>Will users have to type their password every time?</b></div>
+                <div class="card-body">
+                    <p class="card-text">Not necessarily. If their session is active with Microsoft, they just click their name. They only need to type the password if the Microsoft session itself has expired.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <div class="text-center">
+                <p class="oe_mt32">Developed with <i class="fa fa-heart" style="color:red;"></i> by <b>Go On Associated</b></p>
+               
+            </div>
+        </div>
+    </div>
+</section>
