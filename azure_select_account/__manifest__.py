@@ -13,5 +13,5 @@
     'data': [],
     'installable': True,
     'application': False,
-    'images': ['static/description/main_screenshot_app.png'],
+    'images': ['static/description/main_screenshot.png'],
 }
