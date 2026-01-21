@@ -8,6 +8,7 @@
     'category': 'Extra Tools',
     'author': 'Go On Associated',
     'website': 'https://www.gocn.com.br',
+    'license': 'AGPL-3',
     'depends': ['base', 'auth_oauth'], 
     'data': [],
     'installable': True,
