@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     'name': 'Azure SSO: Force Select',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'summary': 'Force Microsoft account selection on every login (Fix Auto-login loop)',
     'category': 'Extra Tools',
     'author': 'Go On Associated',
