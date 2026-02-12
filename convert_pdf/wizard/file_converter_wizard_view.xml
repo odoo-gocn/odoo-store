@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_file_converter_wizard_form" model="ir.ui.view">
+        <field name="name">documents.file.converter.wizard.form</field>
+        <field name="model">documents.file.converter.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Convert File"> <group>
+                    <field name="document_id"/>
+                </group>
+                <group string="Selected File"> <field name="filename"/>
+                    <field name="mimetype"/>
+                </group>
+                <group string="Conversion"> <field name="conversion_type"/>
+                </group>
+                <group string="File Destination"> <field name="replace_original"/>
+                </group>
+                <footer>
+                    <button
+                        name="action_convert"
+                        type="object"
+                        string="Convert" 
+                        class="btn-primary"
+                    /> <button
+                        string="Cancel" 
+                        class="btn-secondary"
+                        special="cancel"
+                    /> </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
